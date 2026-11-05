@@ -19,7 +19,7 @@ enum layer_names {
 #define ENT_FUN  LT(_FUN, KC_ENT)
 
 // Define ~home row mods
-#define X_SHF LSFT_T(KC_X)
+#define N_SHF LSFT_T(KC_N)
 #define S_CTL RCTL_T(KC_S) // Send R-Ctrl, because L-Ctrl emits Hyper in Karabiner
 #define H_OPT LOPT_T(KC_H)
 #define T_CMD LCMD_T(KC_T)
@@ -29,7 +29,7 @@ enum layer_names {
 #define C_CMD RCMD_T(KC_C)
 #define A_OPT ROPT_T(KC_A)
 #define E_CTL RCTL_T(KC_E)
-#define COMM_SHF RSFT_T(KC_COMM)
+#define I_SHF RSFT_T(KC_I)
 
 #define OPT_SEMI LOPT_T(KC_SCLN)
 #define CMD_EQL  LCMD_T(KC_EQL)
@@ -53,14 +53,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /*
    *  B     F     L     D     K        ||        P     W     O     U     .
-   *  N     S^    H⌥    T⌘    M❖       ||       ❖Y    ⌘C    ⌥A    ^E     I
-   *  X⇧    V     J     Q     Z        ||        '     G     /     ;    ⇧,
+   *  N⇧    S^    H⌥    T⌘    M❖       ||       ❖Y    ⌘C    ⌥A    ^E    ⇧I
+   *  X     V     J     Q     Z        ||        '     G     /     ;     ,
    *             esc    R→sym del→num  ||   ret→fn  ␣→nav   tab               
    */
   [_BASE] = LAYOUT( /* Nightingale https://valorance.net/night/reflection */
     KC_B,    KC_F,    KC_L,    KC_D,    KC_K,                        KC_P,    KC_W,    KC_O,    KC_U,    KC_DOT,
-    KC_N,    S_CTL,   H_OPT,   T_CMD,   M_HYP,                       Y_HYP,   C_CMD,   A_OPT,   E_CTL,   KC_I,
-    X_SHF,   KC_V,    KC_J,    KC_Q,    KC_Z,    XXXX,         XXXX, KC_QUOT, KC_G,    KC_SLSH, KC_SCLN, COMM_SHF,
+    N_SHF,   S_CTL,   H_OPT,   T_CMD,   M_HYP,                       Y_HYP,   C_CMD,   A_OPT,   E_CTL,   I_SHF,
+    KC_X,    KC_V,    KC_J,    KC_Q,    KC_Z,    XXXX,         XXXX, KC_QUOT, KC_G,    KC_SLSH, KC_SCLN, KC_COMM,
     XXXX,    XXXX,    XXXX,    KC_ESC,  R_SYM,   DEL_NUM,   ENT_FUN, SPC_NAV, KC_TAB,  XXXX,    XXXX,    XXXX ),
 
   /*
